@@ -478,6 +478,20 @@ header {
   color: #fff;
 }
 
+/* Tabs spanning the same certification program get a shared outline color
+   so related tabs (e.g. AI + Development, both IBM) read as one group. */
+.filter-ibm { border-color: #0F62FE; }
+.filter-ibm:hover { border-color: #0F62FE; color: var(--ink); }
+
+.filter-google {
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--surface), var(--surface)),
+    linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.filter-google:hover { border-color: transparent; color: var(--ink); }
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

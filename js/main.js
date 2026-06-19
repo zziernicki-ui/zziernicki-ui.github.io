@@ -160,21 +160,28 @@
     const cards = Array.from(grid.querySelectorAll(".cert"));
     const buttons = Array.from(bar.querySelectorAll(".filter-btn"));
 
-    bar.addEventListener("click", function (e) {
-      const btn = e.target.closest(".filter-btn");
-      if (!btn) return;
-
-      const filter = btn.getAttribute("data-filter");
-      buttons.forEach(function (b) {
-        b.setAttribute("aria-pressed", String(b === btn));
-      });
-
+    function applyFilter(filter) {
       cards.forEach(function (card) {
         const cats = (card.getAttribute("data-cat") || "").split(/\s+/);
         const show = filter === "all" || cats.indexOf(filter) !== -1;
         card.classList.toggle("is-hidden", !show);
       });
+    }
+
+    bar.addEventListener("click", function (e) {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      applyFilter(btn.getAttribute("data-filter"));
     });
+
+    const initialBtn = buttons.find(function (b) {
+      return b.getAttribute("aria-pressed") === "true";
+    });
+    if (initialBtn) applyFilter(initialBtn.getAttribute("data-filter"));
   })();
 
   /* -----------------------------------------------------------------
