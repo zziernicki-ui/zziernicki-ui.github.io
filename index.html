@@ -86,7 +86,22 @@
           <!-- ===== CASE STUDY 1 — Image Captioning ===== -->
           <article class="case">
             <div class="case-cover">
-              <span class="cover-mark">01</span>
+              <svg viewBox="0 0 340 300" role="img" aria-label="Architecture diagram: a local Gradio web app running a single image-to-caption pipeline through the BLIP model" style="width:100%;height:100%;max-height:320px;padding:20px;font-family:var(--font-mono)">
+                <defs><marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>
+                <text x="10" y="18" style="fill:var(--accent);font-size:11px">01 · single-model pipeline</text>
+                <rect x="10" y="32" width="320" height="254" rx="12" style="fill:none;stroke:var(--line);stroke-dasharray:5 5"/>
+                <text x="24" y="54" style="fill:var(--muted);font-size:9px">GRADIO WEB UI · RUNS LOCALLY</text>
+                <rect x="80" y="72" width="180" height="40" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="170" y="96" text-anchor="middle" style="fill:var(--ink);font-size:11px">Uploaded image</text>
+                <line x1="170" y1="112" x2="170" y2="134" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar1)"/>
+                <rect x="80" y="138" width="180" height="52" rx="8" style="fill:var(--accent-tint);stroke:var(--accent)"/>
+                <text x="170" y="159" text-anchor="middle" style="fill:var(--ink);font-size:11px">BLIP model</text>
+                <text x="170" y="176" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">vision–language transformer</text>
+                <line x1="170" y1="190" x2="170" y2="212" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar1)"/>
+                <rect x="80" y="216" width="180" height="40" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="170" y="240" text-anchor="middle" style="fill:var(--ink);font-size:11px">Natural-language caption</text>
+                <text x="170" y="274" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">Python · PyTorch · Hugging Face</text>
+              </svg>
             </div>
             <div class="case-body">
               <span class="num">Case study 01 · Applied AI</span>
@@ -119,7 +134,25 @@
           <!-- ===== CASE STUDY 2 — Conversational AI Chatbot ===== -->
           <article class="case">
             <div class="case-cover">
-              <span class="cover-mark">02</span>
+              <svg viewBox="0 0 340 300" role="img" aria-label="Architecture diagram: a browser chat UI talking to a Flask REST API hosting the BlenderBot language model with multi-turn conversation state" style="width:100%;height:100%;max-height:320px;padding:20px;font-family:var(--font-mono)">
+                <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>
+                <text x="10" y="18" style="fill:var(--accent);font-size:11px">02 · client–server + LLM</text>
+                <rect x="16" y="96" width="126" height="56" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="79" y="118" text-anchor="middle" style="fill:var(--ink);font-size:11px">Browser chat UI</text>
+                <text x="79" y="134" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">JavaScript</text>
+                <rect x="168" y="34" width="160" height="252" rx="12" style="fill:none;stroke:var(--line);stroke-dasharray:5 5"/>
+                <text x="182" y="56" style="fill:var(--muted);font-size:9px">FLASK SERVER</text>
+                <rect x="184" y="88" width="128" height="52" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="248" y="110" text-anchor="middle" style="fill:var(--ink);font-size:11px">REST /chatbot</text>
+                <text x="248" y="126" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">JSON · CORS</text>
+                <line x1="142" y1="110" x2="180" y2="110" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar2)"/>
+                <line x1="184" y1="132" x2="146" y2="132" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar2)"/>
+                <line x1="248" y1="140" x2="248" y2="168" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar2)"/>
+                <rect x="184" y="172" width="128" height="56" rx="8" style="fill:var(--accent-tint);stroke:var(--accent)"/>
+                <text x="248" y="194" text-anchor="middle" style="fill:var(--ink);font-size:11px">BlenderBot LLM</text>
+                <text x="248" y="210" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">loaded once at startup</text>
+                <text x="248" y="262" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">↺ multi-turn conversation state</text>
+              </svg>
             </div>
             <div class="case-body">
               <span class="num">Case study 02 · Applied AI</span>
@@ -152,7 +185,29 @@
           <!-- ===== CASE STUDY 3 — Zack's IT Help Desk (RAG on Azure) ===== -->
           <article class="case">
             <div class="case-cover">
-              <span class="cover-mark">03</span>
+              <svg viewBox="0 0 340 300" role="img" aria-label="Architecture diagram: React chat UI and FastAPI back end with a Chroma vector store hosted on Azure App Service, calling the Claude API for grounded generation" style="width:100%;height:100%;max-height:320px;padding:20px;font-family:var(--font-mono)">
+                <defs><marker id="ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>
+                <text x="10" y="18" style="fill:var(--accent);font-size:11px">03 · full-stack RAG · cloud</text>
+                <rect x="10" y="34" width="214" height="252" rx="12" style="fill:none;stroke:var(--line);stroke-dasharray:5 5"/>
+                <text x="24" y="56" style="fill:var(--muted);font-size:9px">AZURE APP SERVICE</text>
+                <rect x="26" y="72" width="182" height="40" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="117" y="96" text-anchor="middle" style="fill:var(--ink);font-size:11px">React chat UI</text>
+                <line x1="117" y1="112" x2="117" y2="134" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar3)"/>
+                <rect x="26" y="138" width="182" height="44" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="117" y="156" text-anchor="middle" style="fill:var(--ink);font-size:11px">FastAPI /search</text>
+                <text x="117" y="172" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">validated REST · Swagger</text>
+                <line x1="117" y1="182" x2="117" y2="204" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar3)"/>
+                <rect x="26" y="208" width="182" height="48" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="117" y="228" text-anchor="middle" style="fill:var(--ink);font-size:11px">Chroma vector store</text>
+                <text x="117" y="244" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">semantic retrieval · citations</text>
+                <line x1="208" y1="152" x2="236" y2="152" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar3)"/>
+                <line x1="240" y1="168" x2="212" y2="168" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar3)"/>
+                <rect x="240" y="126" width="90" height="64" rx="8" style="fill:var(--accent-tint);stroke:var(--accent)"/>
+                <text x="285" y="150" text-anchor="middle" style="fill:var(--ink);font-size:11px">Claude API</text>
+                <text x="285" y="166" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">grounded</text>
+                <text x="285" y="178" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">generation</text>
+                <text x="117" y="274" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">answers cite their sources</text>
+              </svg>
             </div>
             <div class="case-body">
               <span class="num">Case study 03 · Applied AI</span>
@@ -185,7 +240,37 @@
           <!-- ===== CASE STUDY 4 — The Azure Migration ===== -->
           <article class="case">
             <div class="case-cover">
-              <span class="cover-mark">04</span>
+              <svg viewBox="0 0 340 300" role="img" aria-label="Architecture diagram: GitHub Actions deploys to Azure App Service, whose Managed Identity authenticates keylessly to Azure AI Search, Azure OpenAI, and Key Vault, with Blob Storage feeding the search indexer" style="width:100%;height:100%;max-height:320px;padding:20px;font-family:var(--font-mono)">
+                <defs><marker id="ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted)"/></marker></defs>
+                <text x="10" y="18" style="fill:var(--accent);font-size:11px">04 · cloud-native · zero-secret</text>
+                <rect x="100" y="34" width="140" height="44" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="170" y="52" text-anchor="middle" style="fill:var(--ink);font-size:11px">GitHub Actions</text>
+                <text x="170" y="68" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">git push → build + deploy</text>
+                <line x1="170" y1="78" x2="170" y2="100" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar4)"/>
+                <rect x="12" y="106" width="316" height="180" rx="12" style="fill:none;stroke:var(--line);stroke-dasharray:5 5"/>
+                <text x="26" y="126" style="fill:var(--muted);font-size:9px">MICROSOFT AZURE</text>
+                <rect x="100" y="134" width="140" height="52" rx="8" style="fill:var(--accent-tint);stroke:var(--accent)"/>
+                <text x="170" y="154" text-anchor="middle" style="fill:var(--ink);font-size:11px">App Service</text>
+                <text x="170" y="170" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">Managed Identity · RBAC</text>
+                <text x="57" y="206" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">RBAC · no keys</text>
+                <line x1="150" y1="186" x2="135" y2="212" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar4)"/>
+                <line x1="190" y1="186" x2="209" y2="212" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar4)"/>
+                <line x1="240" y1="166" x2="283" y2="212" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar4)"/>
+                <rect x="20" y="216" width="68" height="46" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="54" y="236" text-anchor="middle" style="fill:var(--ink);font-size:9.5px">Blob</text>
+                <text x="54" y="250" text-anchor="middle" style="fill:var(--muted);font-size:8px">corpus</text>
+                <line x1="88" y1="239" x2="98" y2="239" style="stroke:var(--muted);stroke-width:1.2" marker-end="url(#ar4)"/>
+                <rect x="100" y="216" width="68" height="46" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="134" y="236" text-anchor="middle" style="fill:var(--ink);font-size:9.5px">AI Search</text>
+                <text x="134" y="250" text-anchor="middle" style="fill:var(--muted);font-size:8px">hybrid RAG</text>
+                <rect x="178" y="216" width="68" height="46" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="212" y="236" text-anchor="middle" style="fill:var(--ink);font-size:9.5px">OpenAI</text>
+                <text x="212" y="250" text-anchor="middle" style="fill:var(--muted);font-size:8px">gpt-5-mini</text>
+                <rect x="256" y="216" width="68" height="46" rx="8" style="fill:var(--surface);stroke:var(--line)"/>
+                <text x="290" y="236" text-anchor="middle" style="fill:var(--ink);font-size:9.5px">Key Vault</text>
+                <text x="290" y="250" text-anchor="middle" style="fill:var(--muted);font-size:8px">secrets</text>
+                <text x="170" y="278" text-anchor="middle" style="fill:var(--muted);font-size:8.5px">telemetry · Application Insights</text>
+              </svg>
             </div>
             <div class="case-body">
               <span class="num">Case study 04 · Applied AI</span>
